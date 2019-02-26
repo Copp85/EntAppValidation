@@ -23,7 +23,7 @@ namespace EntAppSecond.Pages.Model
 
         [Required]
         [Display(Name = "Second name")]
-        [RegularExpression (@"[\\w’-]{2,}")]
+        [RegularExpression (@"[\w’-]{2,}")]
         public string LastName { get; set; } = "";
 
 
@@ -40,15 +40,15 @@ namespace EntAppSecond.Pages.Model
         [Display(Name = "Height")]
         public decimal Height { get; set; }
 
-        [EmailAddress]
-        [Required]
-        [RegularExpression(@"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b")]
-        public string Email { get; set; }
+        //[EmailAddress]
+        //[Required]
+        //[RegularExpression(@"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b")]
+        //public string Email { get; set; }
 
-        [EmailAddress]
-        [Required]
-        [RegularExpression(@"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b")]
-        public string EmailConfirmation { get; set; }
+        //[EmailAddress]
+        //[Required]
+        //[RegularExpression(@"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b")]
+        //public string EmailConfirmation { get; set; }
 
     }
 }

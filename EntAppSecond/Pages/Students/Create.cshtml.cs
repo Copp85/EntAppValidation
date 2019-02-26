@@ -28,8 +28,8 @@ namespace EntAppSecond.Pages.Students
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (Student.Email != Student.EmailConfirmation)
-                ModelState.AddModelError("Student.Email", "emails don't match");
+            //if (Student.Email != Student.EmailConfirmation)
+            //    ModelState.AddModelError("Student.Email", "emails don't match");
 
             if (!ModelState.IsValid)
                 return Page();
