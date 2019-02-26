@@ -1,0 +1,45 @@
+﻿@page
+@model EntAppSecond.Pages.Students.ListStudentsModel
+@{
+    Layout = null;
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Second Name</th>
+            <th>DOB</th>
+            <th>No. of Modules</th>
+            <th>Height</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var student in Model.Students)
+        {
+        <tr>
+            <td>@student.StudentID</td>
+            <td>@student.FirstName</td>
+            <td>@student.LastName</td>
+            <td>@student.DOB</td>
+            <td>@student.NoOfModules</td>
+            <td>@student.Height</td>
+            <td>@student.Email</td>
+        </tr>
+        }
+    </tbody>
+    </table>
+
+@*<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListStudents</title>
+</head>
+<body>
+</body>
+</html>*@

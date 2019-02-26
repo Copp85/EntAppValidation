@@ -17,23 +17,24 @@ namespace EntAppSecond.Pages.Model
         public string StudentID { get; set; } = "";
 
         [Required]
-        [RegularExpression (@"\w{2,50}")]
         [Display(Name = "First name")]
+        [RegularExpression(@"\w{2,50}")]
         public string FirstName { get; set; } = "";
 
         [Required]
-        [RegularExpression (@"[\\w’-]{2,}")]
         [Display(Name = "Second name")]
+        [RegularExpression (@"[\\w’-]{2,}")]
         public string LastName { get; set; } = "";
 
-        
+
         [Required]
         [DataType(DataType.Date)]
-        public DateTime DOB { get; set; } 
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime DOB { get; set; }
 
         [Required]
         [Display(Name = "Number of Modules")]
-        public int NoOfModules { get; set; } 
+        public int NoOfModules { get; set; }
 
         [Required]
         [Display(Name = "Height")]

@@ -10,9 +10,9 @@ namespace EntAppSecond.Model
 {
     public class ModulesAttribute : ValidationAttribute, IClientModelValidator
     {
-            
-        
-            protected override ValidationResult IsValid(object NoOfModules, ValidationContext validationContext)
+
+
+        protected override ValidationResult IsValid(object NoOfModules, ValidationContext validationContext)
         {
             Student student = (Student)validationContext.ObjectInstance;
             if (student.NoOfModules < 1)
