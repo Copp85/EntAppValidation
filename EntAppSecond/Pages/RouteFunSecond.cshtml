@@ -1,0 +1,38 @@
+﻿@page "{message?}"
+@model EntAppSecond.Pages.RouteFunSecondModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RouteFunSecond</title>
+</head>
+<body>
+    @*@if (@RouteData.Values["message"] != null)
+        {
+            @RouteData.Values["message"]
+        }
+        else
+        {
+            <p>no message</p>
+        }*@
+    @*@if (Model.Mess != null)
+    {
+        <p>@Model.Mess</p>
+    }
+    else
+    {
+        <p>no message</p>
+    }*@
+
+    @*Third way*@
+    @*SupportsOnGet*@
+    <p>@Model.Message</p>
+
+
+</body>
+</html>
