@@ -9,6 +9,8 @@ namespace EntAppSecond.Models
 {
     public class CollegeContext : DbContext
     {
+        //private readonly CollegeContext _db;
+
         public CollegeContext(DbContextOptions<CollegeContext> options)
             : base(options)
         {

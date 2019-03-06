@@ -1,0 +1,29 @@
+﻿@page "{id}"
+@model EntAppSecond.Pages.StudentDetailsModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StudentDetails</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>@Model.Student.StudentID</td>
+            <td>@Model.Student.FirstName</td>
+            <td>@Model.Student.LastName</td>
+        </tr>
+    </table>
+
+   
+    <form method="post">
+        <input type="hidden" asp-for=Student.StudentID>
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>

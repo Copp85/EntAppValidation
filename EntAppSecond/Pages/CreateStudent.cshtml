@@ -1,0 +1,36 @@
+﻿@page 
+@model EntAppSecond.Pages.CreateStudentModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateStudent</title>
+</head>
+<body>
+    <form method="post">
+
+        <div asp-validation-summary="All"></div>
+        <div>
+            <label asp-for=Student.FirstName></label>
+            <input asp-for=Student.FirstName>
+        </div>
+
+        <div>
+            <label asp-for=Student.LastName></label>
+            <input asp-for=Student.LastName>
+        </div>
+
+        <div>
+            <label asp-for=Student.StudentID></label>
+            <input asp-for=Student.StudentID>
+        </div>
+
+        <button type="submit">Press Me</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿@page
+@model EntAppSecond.Pages.EditStudentDetailsModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditStudentDetails</title>
+</head>
+<body>
+    <h2> Editing Student: @Model.Student.StudentID</h2>
+
+    <form method="post">
+
+        <div asp-validation-summary="All"></div>
+        <div>
+            <input asp-for="Student.StudentID" hidden>
+        </div>
+        <div>
+            <label asp-for=Student.FirstName></label>
+            <input asp-for=Student.FirstName>
+        </div>
+        <div>
+            <label asp-for=Student.LastName></label>
+            <input asp-for=Student.LastName>
+        </div>
+        <button type="submit">Press Me</button>
+    </form>
+</body>
+</html>
