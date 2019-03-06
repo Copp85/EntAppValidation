@@ -1,10 +1,14 @@
 ﻿@page
 @model EntAppSecond.Pages.Students.ListStudentsModel
+@addTagHelper 
 @{
     Layout = null;
 }
 
-<table >
+<h4>@Model.Message</h4>
+
+<h5>@Model.Message2</h5>
+<table>
     <thead>
         <tr>
             <th>ID</th>
@@ -20,27 +24,27 @@
     <tbody>
         @foreach (var student in Model.Students)
         {
-        <tr>
-            <td>@student.StudentID</td>
-            <td>@student.FirstName</td>
-            <td>@student.LastName</td>
-            <td>@student.DOB</td>
-            <td>@student.NoOfModules</td>
-            <td>@student.Height</td>
-            @*<td>@student.Email</td>*@
-            <td> <a asp-page="StudentDetails" asp-route-id="@student.StudentID">Details</a> </td>
-        </tr>
+            <tr>
+                <td>@student.StudentID</td>
+                <td>@student.FirstName</td>
+                <td>@student.LastName</td>
+                <td>@student.DOB</td>
+                <td>@student.NoOfModules</td>
+                <td>@student.Height</td>
+                @*<td>@student.Email</td>*@
+                <td> <a asp-page="StudentDetails" asp-route-id="@student.StudentID">Details</a> </td>
+            </tr>
         }
     </tbody>
-    </table>
+</table>
 
 @*<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>ListStudents</title>
-</head>
-<body>
-</body>
-</html>*@
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>ListStudents</title>
+    </head>
+    <body>
+    </body>
+    </html>*@

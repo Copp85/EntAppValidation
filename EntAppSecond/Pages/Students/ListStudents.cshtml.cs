@@ -16,6 +16,11 @@ namespace EntAppSecond.Pages.Students
     {
         private readonly CollegeContext _db;
 
+        [TempData]
+        public string Message { get; set; }
+
+        public string Message2;
+
         public ListStudentsModel(CollegeContext db)
         {
             _db = db;
@@ -28,10 +33,7 @@ namespace EntAppSecond.Pages.Students
             Students = await _db.Students.AsNoTracking().ToListAsync();
         }
 
-        //public void OnGet()
-        //{
-
-        //}
+       
     }
 
 
